@@ -125,7 +125,8 @@ if( ! function_exists( 'reverie_scripts_and_styles ' ) ) {
 	    // modernizr (without media query polyfill)
 	    wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.6.2', false );
 
-	    // register Google font
+	    // register Google 
+	    // 
 	    wp_register_style('google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Leckerli+One|Bubblegum+Sans|Dosis:300,400,500,600,700');
 	
 	    // register Font Awesome

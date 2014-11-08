@@ -138,5 +138,9 @@ function remove_admin_menu_links(){
 		remove_submenu_page('edit.php?post_type=acf-field-group','edit.php?post_type=acf-field-group&amp;page=acf-settings-updates');
 	}
 }
-
+      add_action( 'admin_enqueue_scripts', 'load_admin_style' );
+      function load_admin_style() {
+	    wp_register_style('font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', false, '1.0.0');
+	        wp_enqueue_style( 'font-awesome' );
+       }
 ?>
