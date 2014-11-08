@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Wptuts+ Dashboard Widgets
-Plugin URI:
-Description: Create custom dashboard widgets
-Version: 0.1
-Author: Guillaume Voisin
-Author URI: http://wp.tutsplus.com/author/guillaumevoisin
+Plugin Name: Welcome Dashboard Widgets
+Plugin URI: http://revivemarketing.org
+Description: Create custom dashboard content
+Version: 0.1.5
+Author: Jesse Matlock	
+Author URI: http://jessematlock.com
 License: GPL2
 */
 

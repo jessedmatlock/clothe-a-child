@@ -118,24 +118,30 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 add_action('admin_menu', 'remove_admin_menu_links', 999);
 function remove_admin_menu_links(){
+		global $submenu;
+		unset($submenu['themes.php'][6]); // remove customize link
+	
 	$user = wp_get_current_user();
 	if( $user && $user->ID !== 1) {
-		remove_submenu_page('admin.php?page=gf_edit_forms','admin.php?page=gf_settings');
-		remove_submenu_page('admin.php','gf_export');
-		remove_submenu_page('admin.php','gf_update');
-		remove_submenu_page('admin.php','gf_addons');
-		remove_submenu_page('admin.php','gf_help');
+		remove_submenu_page('gf_edit_forms','gf_settings');
+		remove_submenu_page('gf_edit_forms','gf_export');
+		remove_submenu_page('gf_edit_forms','gf_update');
+		remove_submenu_page('gf_edit_forms','gf_addons');
+		remove_submenu_page('gf_edit_forms','gf_help');
 		remove_menu_page('edit-comments.php');
-		//remove_submenu_page('themes.php','customize.php');
+		remove_submenu_page('themes.php','themes.php');
+		remove_submenu_page('themes.php','customize.php?return=%2Fwp-admin%2Fpost.php%3Fpost%3D2%26action%3Dedit%26message%3D1');
 		remove_submenu_page('themes.php','widgets.php');		
 		remove_submenu_page('themes.php','custom-background');
 		remove_submenu_page('themes.php','theme-editor.php');
+		remove_submenu_page('plugins.php','plugin-editor.php');
 		remove_menu_page('plugin-editor.php');
 		remove_menu_page('tools.php');
-		
-		remove_menu_page('page.php');
-		remove_submenu_page('edit.php?post_type=acf-field-group','edit.php?post_type=acf-field-group&amp;page=acf-settings-export');
-		remove_submenu_page('edit.php?post_type=acf-field-group','edit.php?post_type=acf-field-group&amp;page=acf-settings-updates');
+		remove_menu_page('customize.php');
+			
+		remove_menu_page('edit.php?post_type=acf-field-group');
+		remove_submenu_page('acf-field-group','acf-settings-export');
+		remove_submenu_page('acf-field-group','acf-settings-updates');
 	}
 }
       add_action( 'admin_enqueue_scripts', 'load_admin_style' );
