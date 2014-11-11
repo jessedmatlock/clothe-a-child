@@ -2,187 +2,293 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>currentDocument</key>
+	<string>wp-content/themes/reverie/contact-template.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/404.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/archive.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/bbpress.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/comments.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/community-landing-template.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/community-template.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/contact-template.php</string>
+			<key>lastUsed</key>
+			<date>2014-11-11T04:38:56Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/content-none.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/content.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>css</string>
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>selected</key>
-			<true/>
 			<key>sourceDirectory</key>
 			<string>wp-content/themes/reverie/css</string>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/flexible-loop.php</string>
-			<key>selected</key>
-			<true/>
+			<key>lastUsed</key>
+			<date>2014-11-11T04:19:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/flexible-sidebar-template.php</string>
-			<key>selected</key>
-			<true/>
+			<key>lastUsed</key>
+			<date>2014-11-11T02:43:55Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/flexible-template.php</string>
-			<key>selected</key>
-			<true/>
+			<key>lastUsed</key>
+			<date>2014-11-11T02:43:51Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/footer.php</string>
-			<key>selected</key>
-			<true/>
+			<key>lastUsed</key>
+			<date>2014-11-11T04:38:56Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/functions.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/header.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/homepage-template.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/index.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>js</string>
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>selected</key>
-			<true/>
 			<key>sourceDirectory</key>
 			<string>wp-content/themes/reverie/js</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>lib</string>
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>selected</key>
-			<true/>
 			<key>sourceDirectory</key>
 			<string>wp-content/themes/reverie/lib</string>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/page.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/sample-elements.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/search.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/searchform.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/sidebar.php</string>
-			<key>selected</key>
-			<true/>
+			<key>lastUsed</key>
+			<date>2014-11-11T04:19:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/single.php</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>wp-content/themes/reverie/style.css</string>
-			<key>selected</key>
-			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>290</integer>
 	<key>metaData</key>
-	<dict/>
+	<dict>
+		<key>wp-content/themes/reverie/contact-template.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>30</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>wp-content/themes/reverie/flexible-loop.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>292</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>308</integer>
+		</dict>
+		<key>wp-content/themes/reverie/flexible-sidebar-template.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>22</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>wp-content/themes/reverie/flexible-template.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>wp-content/themes/reverie/footer.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>12</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>wp-content/themes/reverie/js/app.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>58</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>23</integer>
+		</dict>
+		<key>wp-content/themes/reverie/lib/clean.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>188</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>139</integer>
+		</dict>
+		<key>wp-content/themes/reverie/sidebar.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>3</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>wp-content/themes/reverie/flexible-loop.php</string>
+		<string>wp-content/themes/reverie/flexible-sidebar-template.php</string>
+		<string>wp-content/themes/reverie/footer.php</string>
+		<string>wp-content/themes/reverie/contact-template.php</string>
+		<string>wp-content/themes/reverie/flexible-template.php</string>
+		<string>wp-content/themes/reverie/lib/clean.php</string>
+		<string>wp-content/themes/reverie/js/app.js</string>
+		<string>wp-content/themes/reverie/sidebar.php</string>
+	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
