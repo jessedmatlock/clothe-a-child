@@ -8,7 +8,7 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 <div class="row">
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 large-8 columns">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>		

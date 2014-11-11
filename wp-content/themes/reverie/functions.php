@@ -149,4 +149,9 @@ function remove_admin_menu_links(){
 	    wp_register_style('font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', false, '1.0.0');
 	        wp_enqueue_style( 'font-awesome' );
        }
+	if( function_exists('acf_add_options_page') ) {
+
+		acf_add_options_page();
+
+	}
 ?>

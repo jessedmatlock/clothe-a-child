@@ -2,7 +2,7 @@
 <?php echo 'Index'; ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 large-8 columns">
 	
 	<?php if ( have_posts() ) : ?>
 	

@@ -6,10 +6,10 @@ Template Name: Community Landing Template
 get_header(); ?>
 <?php //echo  'Community Landing'; ?>
 	<div class="section-design section-header color-<?php the_field('header_background_color'); ?> pattern-<?php the_field('header_background_image'); ?>">
-		<h1 class="section-heading"><?php the_title(); ?></h1>
+		<h1 class="section-heading"><?php the_field('page_header_title'); ?></h1>
 	</div>
 
-<div class="row">
+<div class="row flexible-loop">
 	<div class="small-12 large-8 columns">
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			
@@ -37,8 +37,11 @@ get_header(); ?>
 			<?php if( have_rows('content_items', $community->ID) ): ?>
 
 			    <?php while ( have_rows('content_items',$community->ID) ) : the_row(); ?>
+					<!-- start text content section -->
+					<div class="row">
+						<div class="small-12 medium-12 large-12 columns">	
 
-			        <?php if( get_row_layout() == 'content_heading' ): ?>
+					<?php if( get_row_layout() == 'text_content' ):  ?>
 						<?php if(get_sub_field('show_heading_on_category_page',$community->ID )): ?>
 						<!-- start heading -->
 						<header>
@@ -47,22 +50,18 @@ get_header(); ?>
 						<!-- end heading -->
 						<?php  endif; ?>
 						
-
-					<?php elseif( get_row_layout() == 'text_content' ):  ?>
+						
 						<?php if( get_sub_field('show_text_on_category_page', $community->ID)): ?>
 							
-						<!-- start text content section -->
-						<div class="row">
-							<div class="small-12 medium-12 large-12 columns">	
 								<div class="entry-content">
 									<img src="<?php the_sub_field('content_image', $community->ID); ?>"  class="<?php the_sub_field('image_alignment', $community->ID); ?>" id="id"  alt="" />
 									<p><?php the_sub_field('text_content', $community->ID); ?> <a href="<?php the_permalink(); ?>"> &nbsp;&nbsp;&nbsp;read more &raquo;</a></p>
 								</div>
-						    </div><!-- end columns -->
-						</div><!-- end row -->					
 						<!-- end text content section -->
 			        	<?php  endif; ?>
 			        <?php endif; ?>
+				    </div><!-- end columns -->
+				</div><!-- end row -->					
 
 			    <?php endwhile; ?>
 

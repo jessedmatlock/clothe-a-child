@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php echo '404'; ?>
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 columns">
 	
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
@@ -21,6 +21,5 @@
 		</article>
 
 	</div>
-	<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

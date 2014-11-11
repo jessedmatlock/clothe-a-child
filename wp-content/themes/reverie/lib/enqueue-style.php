@@ -7,7 +7,8 @@ if( ! function_exists( 'reverie_enqueue_style' ) ) {
 	function reverie_enqueue_style()
 	{
 		// bxlslider  stylesheet
-		wp_register_style( 'reverie-bxslider-stylesheet', get_stylesheet_directory_uri() . '/css/jquery.bxslider.css', array(), '' );
+		wp_register_style( 'owl-carousel', get_stylesheet_directory_uri() . '/css/owl.carousel.css', array(), '' );
+		wp_register_style( 'owl-theme', get_stylesheet_directory_uri() . '/css/owl.theme.css', array(), '' );
 		
 		// foundation stylesheet
 		wp_register_style( 'reverie-foundation-stylesheet', get_stylesheet_directory_uri() . '/css/app.css', array(), '' );
@@ -15,7 +16,8 @@ if( ! function_exists( 'reverie_enqueue_style' ) ) {
 		// Register the main style
 		wp_register_style( 'reverie-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 		
-		wp_enqueue_style( 'reverie-bxslider-stylesheet' );
+		wp_enqueue_style( 'owl-carousel' );		
+		wp_enqueue_style( 'owl-theme' );
 		wp_enqueue_style( 'reverie-foundation-stylesheet' );
 		wp_enqueue_style( 'reverie-stylesheet' );
 		

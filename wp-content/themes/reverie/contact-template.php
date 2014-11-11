@@ -7,11 +7,11 @@ Template Name: Contact Us Template
 
 <!-- Row for main content area -->
 				<div class="section-design section-header color-<?php the_field('header_background_color'); ?> pattern-<?php the_field('header_background_image'); ?>">
-					<h1 class="section-heading"><?php the_title(); ?></h1>
+					<h1 class="section-heading"><?php the_field('page_header_title'); ?></h1>
 				</div>
 
-<div class="row">
-	<div class="small-12 large-8 columns" id="content" role="main">
+<div class="row flexible-loop">
+	<div class="small-12 large-8 columns">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>

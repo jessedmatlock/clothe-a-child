@@ -7,14 +7,23 @@
 			    <?php while ( have_rows('content_items') ) : the_row(); ?>
 
 					<?php // check for the heading and only show it here if it is a child of the Locations page. ?>
-			        <?php if( get_row_layout() == 'content_heading' && $post->post_parent=="30" ): ?>
+			        <?php if( get_row_layout() == 'text_content' ): ?>
 						
 						<!-- start heading -->
-						<header>
-							<<?php the_sub_field('heading_size'); ?>><?php the_sub_field('heading_text'); ?></<?php the_sub_field('heading_size'); ?>>
-						</header>
-						<!-- end heading -->
-
+						<div class="row">
+						    <div class="small-12 medium-12 large-12 columns">
+								<header>
+									<<?php the_sub_field('heading_size'); ?>><?php the_sub_field('heading_text'); ?></<?php the_sub_field('heading_size'); ?>> 
+								</header>						
+								<div class="entry-content">
+									<?php if(get_sub_field('content_image')):  ?>
+										<img src="<?php the_sub_field('content_image'); ?>"  class="<?php the_sub_field('image_alignment'); ?>" id="id"  alt="" />
+									<?php endif; ?>
+									<?php the_sub_field('text_content'); ?>
+								</div>
+						    </div><!-- end columns -->
+						</div><!-- end row -->					
+						<!-- end text content section -->
 			        <?php elseif( get_row_layout() == 'cta_steps' ):  ?>
 						<div id="steps">
 							<div class="row">
@@ -57,18 +66,6 @@
 							</div><!-- end row -->
 						</div><!-- #steps -->
 				
-			        <?php elseif( get_row_layout() == 'text_content' ):  ?>
-						
-						<!-- start text content section -->
-						<div class="row">
-							<div class="small-12 medium-12 large-12 columns">	
-								<div class="entry-content">
-									<img src="<?php the_sub_field('content_image'); ?>"  class="<?php the_sub_field('image_alignment'); ?>" id="id"  alt="" />
-									<?php the_sub_field('text_content'); ?>
-								</div>
-						    </div><!-- end columns -->
-						</div><!-- end row -->					
-						<!-- end text content section -->
 						
 			        <?php elseif( get_row_layout() == 'section_with_circles' ):  ?>
 													
@@ -206,18 +203,75 @@
 							<?php endwhile; ?>								
 						</ul>
 						<!-- end slideshow -->							
+			        <?php elseif( get_row_layout() == 'platinum_gallery' ):  ?>
+				
+					
+						
+						
+						<?php if( get_sub_field("platinum_gallery_images") ): /*?>	
+							<ul id="platinum-gallery-filter" class="gallery-filter" data-option-key="filter">
+								<li><a class="selected filter" href="javascript:void(0)" data-filter="*">All</a></li>
+
+								<?php while ( have_rows('platinum_gallery_images') ) : the_row(); ?>
+									<?php $platinum_values = get_sub_field('platinum_gallery_item_type'); ?>								
+									<?php if($platinum_values) : ?>
+										<?php foreach($platinum_values as $platinum_value): ?>
+											<li><a class="filter" href="javascript:void(0);" data-filter=".<?php echo $platinum_value; ?>"><?php echo $platinum_value; ?></a></li>
+										<?php endforeach; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>							
+							</ul>
+							*/ ?>
+							
+							<div id="platinum-gallery" class="clearfix gallery">
+								<h2 class="smiley-title"><?php get_sub_field('platinum_galley_title') ? the_sub_field('platinum_galley_title') : the_title(); ?></h2>
+					
+							<?php while ( have_rows('platinum_gallery_images') ) : the_row(); ?>
+								
+									<?php 
+										$platinum_gallery_item_types = get_sub_field('platinum_gallery_item_type');
+										$platinum_gallery_item_types = join(' ', array_filter($platinum_gallery_item_types));
+										$platinum_gallery_pop_image = get_sub_field('platinum_gallery_item_lg_image') ? get_sub_field('platinum_gallery_item_lg_image') : get_sub_field('platinum_gallery_item_image');										
+									?>
+											
+									
+									<div class="gallery-item <?php echo $platinum_gallery_item_types; ?>">
+										
+										<div class="gallery-item-wrapper">
+											<img src="<?php the_sub_field('platinum_gallery_item_image'); ?>" class="img-responsive" alt="">
+											<div class="gallery-item-overlay">
+												<a class="gallery-item-pop" 
+												   	href="<?php echo $platinum_gallery_pop_image; ?>"
+													title="<?php the_sub_field('platinum_gallery_item_caption'); ?>"><i class="fa fa-search"></i></a>
+												
+												<?php if(get_sub_field('platinum_sponsor_url')): ?>
+													<a class="gallery-item-link" href="<?php the_sub_field('platinum_sponsor_url'); ?>" target="_blank"><i class="fa fa-link"></i></a>
+												<?php endif; ?>
+												
+											</div><!-- gallery-item-overlay -->
+											<div class="gallery-item-caption">
+												<?php the_sub_field('platinum_gallery_item_caption'); ?>
+											</div>
+										</div><!-- end div.gallery-item-wrapper -->
+
+									</div><!-- end gallery item -->
+
+							<?php endwhile; ?>
+						</div>							
+
+						<?php endif; ?>
 
 			        <?php elseif( get_row_layout() == 'gallery' ):  ?>
 						<?php if( get_sub_field("gallery_images") ): ?>	
 							
-							<?php
-							
+							<?php 
+							// will show ALL available gallery item types, regardless of whether there are any gallery items assigned to each type.
 							$gallery_item_type_key = "field_5453b795d1377";
 							$gallery_item_type = get_field_object($gallery_item_type_key);
 							?>
 							<?php if( $gallery_item_type ) : ?>
 
-								<ul id="gallery-filter" data-option-key="filter">
+								<ul id="gallery-filter" class="gallery-filter" data-option-key="filter">
 									<!-- hard coded - changed to dynamically accessing the select element from within ACF, in case we add/remove values this menu will be current/correct -->
 									<li><a class="selected filter" href="javascript:void(0)" data-filter="*">All</a></li>
 									<!--li><a class="filter" href="javascript:void(0)" data-filter=".sponsor">Sponsors</a></li>
@@ -227,28 +281,31 @@
 									
 									<?php foreach( $gallery_item_type['choices'] as $k => $v ): ?>
 										<li><a class="filter" href="javascript:void(0);" data-filter=".<?php echo $k; ?>"><?php echo $v; ?></a></li>
-										
 									<?php endforeach; ?>
 									
+									<?php/* foreach( $gallery_item_type['choices'] as $k => $v ): ?>
+										<?php $newArray[] = $v; ?>
+									<?php endforeach; ?>
+
+
+									<?php foreach( array_unique($newArray) as $k => $v ): ?>
+										<li><a class="filter" href="javascript:void(0);" data-filter=".<?php echo $k; ?>"><?php echo $v; ?></a></li>
+									<?php endforeach; */?>
 								</ul>
-								
 							
-							<?php endif; ?>
+							<?php  endif; ?>
 							
 							
-							<div id="gallery" class="clearfix">
+							<div id="gallery" class="gallery" class="clearfix">
 					
 							<?php while ( have_rows('gallery_images') ) : the_row(); ?>
 								
-								
-								
-									
 									<?php 
 										$gallery_item_types = get_sub_field('gallery_item_type');
 										$gallery_item_types = join(' ', array_filter($gallery_item_types));
-										$gallery_pop_image = get_sub_field('gallery_item_lg_image') ? get_sub_field('gallery_item_lg_image') : get_sub_field('gallery_item_image')
-									 ?>
-									
+										$gallery_pop_image = get_sub_field('gallery_item_lg_image') ? get_sub_field('gallery_item_lg_image') : get_sub_field('gallery_item_image');		
+									?>
+											
 									<div class="gallery-item <?php echo $gallery_item_types; ?>">
 										
 										<div class="gallery-item-wrapper">
@@ -271,7 +328,7 @@
 									</div><!-- end gallery item -->
 
 							<?php endwhile; ?>
-						</div>							
+						</div>				
 
 						<?php endif; ?>
 			        <?php elseif( get_row_layout() == 'testimonial_section' ):  ?>
@@ -306,7 +363,7 @@
 										 	 				<figure><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></figure>
 														<?php endif; ?>
 														<h3><?php the_title(); ?></h3>
-														<div class='post_title'><?php the_excerpt(); ?> <a href="<?php the_permalink(); ?>" class="readmore">&nbsp;&nbsp;&nbsp;read more &raquo;</a></div>
+														<div class='post_title'><?php the_excerpt(); ?> <a href="<?php the_permalink(); ?>" class="readmore">read more &raquo;</a></div>
 													</div><!-- end div.testimonial -->
 												</li>
 											 <?php endwhile; ?>
@@ -321,46 +378,43 @@
 			        <?php elseif( get_row_layout() == 'sponsor' ):  ?>
 
 							<?php if( have_rows('sponsor_slider') ): ?>
-							<div class="sponsor-slider-wrapper">
-									<h2 class="smiley-title">Our Sponsors</h2>
+								
+								<div class="row">
+								    <div class="small-12 medium-12 large-12 columns">
+								        <div class="sponsor-slider-wrapper">
+											<h2 class="smiley-title">Our Sponsors</h2>
+								        	<div id="owl-demo" class="owl-carousel owl-theme">
 									
-								<ul class="sponsor-slider">
-
-								<?php while( have_rows('sponsor_slider') ): the_row(); 
-
-									// vars
-									$name = get_sub_field('sponsor_name');
-									$image = get_sub_field('sponsor_image');
-									$level = get_sub_field('sponsor_level');
-									$type = get_sub_field('sponsor_type');
-									$link = get_sub_field('sponsor_homepage_link');
-
-									?>
-
-									<li class="sponsor-slide">
-
-											<div class="sponsor-overlay <?php echo $type; ?> <?php echo $level; ?>">												
-												<?php if( $link ): ?>
-													<a href="<?php echo $link; ?>" target="_blank" class="sponsor-overlay-link"><i class="fa fa-link"></i></a>
-												<?php else: ?>
-													<a href="<?php echo $link; ?>" target="_blank" class="sponsor-overlay-link"><i class="fa fa-unlink"></i></a>
-												<?php endif; ?>												
-											</div><!-- end div.sponsor-overlay -->
-											<?php if( $name ): ?>
-												<div class="sponsor-name"><?php echo $name; ?></div>
-											<?php endif; ?>
-											
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-									</li>
-
-								<?php endwhile; ?>
-
-								</ul>
-							</div><!-- end div.sponsor-slider-wrapper -->
+												<?php while( have_rows('sponsor_slider') ): the_row(); 
+													// vars
+													$name = get_sub_field('sponsor_name');
+													$image = get_sub_field('sponsor_image');
+													$level = get_sub_field('sponsor_level');
+													$type = get_sub_field('sponsor_type');
+													$link = get_sub_field('sponsor_homepage_link');
+												?>
+									
+												<div class="item">
+													<div class="sponsor-overlay <?php echo $type; ?> <?php echo $level; ?>">												
+														<?php if( $link ): ?>
+															<a href="<?php echo $link; ?>" target="_blank" class="sponsor-overlay-link"><i class="fa fa-link"></i></a>
+														<?php endif; ?>												
+													</div><!-- end div.sponsor-overlay -->
+														<?php if( $name ): ?>
+															<div class="sponsor-name"><?php echo $name; ?></div>
+														<?php endif; ?>
+													<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+													
+												</div><!-- end .item -->
+												<?php endwhile; ?>
+												
+											</div><!-- end #owl-demo -->
+								    </div><!-- end columns -->
+								</div><!-- end row -->
 							
-							<?php endif; ?>						
+							<?php endif; // have_rows('sponsor_slider')  ?>						
 						
-			        <?php endif; ?>
+			        <?php endif; //elseif( get_row_layout() == 'sponsor' ): ?>
 
 			    <?php endwhile; ?>
 

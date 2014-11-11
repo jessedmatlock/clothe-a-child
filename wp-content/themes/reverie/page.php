@@ -1,12 +1,12 @@
-<?php
+ÍÍ<?php
 /*
 Template Name: Sidebar Page
 */
  get_header(); ?>
-<?php echo 'Page'; ?>
+<?php //echo 'Page'; ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 large-8 columns">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>

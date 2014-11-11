@@ -1935,9 +1935,11 @@ button, .button {
 }
 
 .button.primary:hover,
-.button.primary:focus {
+.button.primary:focus,
+.footer-contact .button {
 	background-color: #AA439C;
 	border-color: #AA439C;
+	color: #fff;
 }
 button:hover, button:focus,
 .button:hover, .button:focus {

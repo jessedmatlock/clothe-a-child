@@ -1,17 +1,18 @@
 <?php get_header(); ?>
-<?php echo 'Single'; ?>
+<?php //echo 'Single'; ?>
+
+
+<div class="section-design section-header color-purple pattern-cac">
+	<h1 class="section-heading"><?php the_title(); ?></h1>
+</div>
 
 <!-- Row for main content area -->
 <div class="row">
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 large-8 columns">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<!--?php reverie_entry_meta(); ?-->
-			</header>
 				<?php if ( has_post_thumbnail() ): ?>
 				<div class="entry-content has-image clearfix">
  	 				<figure><?php the_post_thumbnail(); ?></figure>
