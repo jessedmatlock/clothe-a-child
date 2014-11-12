@@ -9,7 +9,7 @@
 			<div id="" class="panel"><!-- start article #.panel -->
 				<?php $location = get_field('map_pin', 'options'); ?>
 									
-				<?php if( !empty($location) ): ?>
+				<?php if( !empty($location) && is_page('11')): ?>
 					<div class="row">
 					    <div class="small-12 medium-12 large-12 columns">
 					        <div class="acf-map">
