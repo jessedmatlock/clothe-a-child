@@ -394,6 +394,9 @@ ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li 
   background-color: transparent;
   padding: 1.5rem 1.5rem;
 }
+#sidebar .panel p {
+	margin: 20px 0;
+}
 #sidebar .panel a:not(.button), .footer-widget .panel a {
   color: #999;
   font-size: 0.9375rem;
@@ -1479,6 +1482,7 @@ ul.asterisk li:before {
 	max-height: 500px;
 	margin: 0 1% 1% 0;
 	float: left;
+	overflow: hidden;
 }
 
 #platinum-gallery .gallery-item {
@@ -1629,4 +1633,8 @@ ul.asterisk li:before {
 	border-top: #ccc solid 1px;
 	border-bottom: #ccc solid 1px;
 	margin: 0 0 20px 0;
+}
+
+#footer-map .acf-map {
+	margin-bottom: 0;
 }
