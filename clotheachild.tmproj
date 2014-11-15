@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>wp-content/themes/reverie/contact-template.php</string>
+	<string>wp-content/themes/reverie/flexible-loop.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -34,9 +34,7 @@
 			<key>filename</key>
 			<string>wp-content/themes/reverie/contact-template.php</string>
 			<key>lastUsed</key>
-			<date>2014-11-11T04:38:56Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2014-11-12T01:59:43Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -58,7 +56,9 @@
 			<key>filename</key>
 			<string>wp-content/themes/reverie/flexible-loop.php</string>
 			<key>lastUsed</key>
-			<date>2014-11-11T04:19:32Z</date>
+			<date>2014-11-13T23:57:15Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -134,7 +134,7 @@
 			<key>filename</key>
 			<string>wp-content/themes/reverie/sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2014-11-11T04:19:46Z</date>
+			<date>2014-11-13T23:57:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -168,14 +168,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>17</integer>
 				<key>line</key>
-				<integer>292</integer>
+				<integer>253</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>308</integer>
+			<integer>207</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>251</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>254</integer>
+			</dict>
 		</dict>
 		<key>wp-content/themes/reverie/flexible-sidebar-template.php</key>
 		<dict>
@@ -252,30 +268,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>45</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>53</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>3</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>10</integer>
-			</dict>
+			<integer>13</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
